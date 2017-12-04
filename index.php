@@ -78,8 +78,6 @@
 					</svg>
 				</div>
 
-					<?php echo $_SESSION['user']; ?>
-
 					<form class="form-wrap" action="php/login_processing.php" method="post">
 				    <div class="form-group_1">
 				      <label for="username">Username</label>

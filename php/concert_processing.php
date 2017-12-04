@@ -1,5 +1,5 @@
 <?php
-  require_once 'includes/initialize.php'; 
+  require_once './includes/initialize.php'; 
   if (isset($_POST['submit'])) {
     // form was submitted
     $user_id = $_SESSION['user'];

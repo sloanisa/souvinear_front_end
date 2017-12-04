@@ -1,5 +1,5 @@
 <?php require_once 'includes/initialize.php'; ?>
-<?php require_once 'concert_processing.php'; ?>
+<?php require_once 'php/concert_processing.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en" >

@@ -1,6 +1,6 @@
 <?php
 
-  require_once("includes/initialize.php");
+  require_once("./includes/initialize.php");
   if (isset($_POST['submit'])) {
     // form was submitted
     $username = $_POST['username'];
