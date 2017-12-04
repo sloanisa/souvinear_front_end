@@ -87,6 +87,28 @@
     background-color: #f8669f;
     color: white; }
 
+.form-group_3 {
+  position: relative;
+  margin: 0; }
+  .form-group_3 label {
+    position: absolute;
+    font-family: 'Muli', sans-serif;
+    margin-top: -1.3rem; }
+  .form-group_3 img {
+    position: absolute;
+    width: 10%;
+    margin-top: -1.7rem;
+    margin-left: 9.3rem; }
+  .form-group_3 input {
+    background-color: #afb0be;
+    outline: none;
+    -webkit-transition: background-color 350ms ease 0s;
+    transition: background-color 350ms ease 0s;
+    color: white; }
+  .form-group_3 input:focus {
+    background-color: #f8669f;
+    color: white; }
+
 .log-in_wrap {
   display: -webkit-box;
   display: -ms-flexbox;

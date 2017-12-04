@@ -2,7 +2,7 @@
 <?php require_once 'concert_processing.php'; ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8">
   <title>Add Concert</title>

@@ -1,7 +1,7 @@
 <?php require_once 'includes/initialize.php'; ?>
 
 <!DOCTYPE html>
-<html lang="en" manifest="cache.manifest">
+<html lang="en">
 
 <head>
 	<!-- What it tries to add as homepage app name -->
@@ -14,7 +14,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 	<!-- Make the app title different from the web page title -->
-	<meta name="apple-mobile-web-app-title" content="myReel">
+	<meta name="apple-mobile-web-app-title" content="souvinear">
 
 	<!-- Disable auto phone number detection -->
 	<meta name="format-detection" content="telephone=no">
@@ -145,7 +145,6 @@
 	<!-- JAVASCRIPT-->
 	<!-- JS to change config variables -->
 	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/js-refresh-manifest.js" type="text/javascript"></script>
 	<script type="text/javascript">
 	    // Customize config variable BEFORE loading addToHome.js file this is how to change the parameters
 	    var addToHomeConfig = {
