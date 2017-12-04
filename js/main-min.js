@@ -1,0 +1,1 @@
+function jmp2LocalPage(o){location.href=o}

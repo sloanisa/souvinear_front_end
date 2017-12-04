@@ -1,0 +1,63 @@
+CACHE MANIFEST
+# version - 364
+
+CACHE:
+
+# CSS
+css/normalize.css
+css/css-add2home.css
+css/main.css
+
+# FONTS
+fonts/Cantarell-Regular.ttf
+fonts/FjallaOne-Regular.ttf
+
+# IMAGES
+graphics/myreel_icon-57x57.png
+graphics/myreel_icon-72x72.png
+graphics/myreel_icon-76x76.png
+graphics/myreel_icon-114x114.png
+graphics/myreel_icon-144x144.png
+graphics/myreel_icon-152x152.png
+graphics/myreel_icon-180x180.png
+graphics/heart.svg
+graphics/list.svg
+graphics/eye.svg
+graphics/arrow.svg
+graphics/horror.svg
+graphics/action.svg
+graphics/cartoon.svg
+graphics/comedy.svg
+graphics/fantasy.svg
+graphics/drama.svg
+graphics/romance.svg
+graphics/sci-fi.svg
+graphics/adventure.svg
+graphics/confirm.svg
+graphics/star.svg
+graphics/star_full.svg
+graphics/arrow.svg
+graphics/horror_selected.svg
+graphics/action_selected.svg
+graphics/cartoon_selected.svg
+graphics/comedy_selected.svg
+graphics/fantasy_selected.svg
+graphics/drama_selected.svg
+graphics/romance_selected.svg
+graphics/sci-fi_selected.svg
+graphics/adventure_selected.svg
+
+
+# HTML FILES
+index.html
+favorites.html
+seen.html
+
+# JAVASCRIPT - SPECIFIC ORDER
+js/jquery-3.2.1.min.js
+js/js-refresh-manifest.js
+js/js-add2home.js
+js/main.js
+
+## Any resources not listed above will require the user to be online.
+NETWORK:
