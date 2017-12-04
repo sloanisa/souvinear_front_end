@@ -1,6 +1,6 @@
 <?php
 
-  require_once("./includes/initialize.php");
+  require_once("../includes/initialize.php");
   if (isset($_POST['submit'])) {
     // form was submitted
     $username = $_POST['username'];
@@ -24,16 +24,12 @@
     echo $_SESSION['user'];
       
     if (($result->num_rows)== 1) {
-        //object(mysqli_result)#2 (5) { ["current_field"]=> int(0) ["field_count"]=> int(3) ["lengths"]=> NULL ["num_rows"]=> int(0) ["type"]=> int(0) } <- wrong password
-        
-        //object(mysqli_result)#2 (5) { ["current_field"]=> int(0) ["field_count"]=> int(3) ["lengths"]=> NULL ["num_rows"]=> int(1) ["type"]=> int(0) } <- right password
-      
-        //var_dump($result);
-        redirect_to("main.php");
+
+        redirect_to("./index.php");
     }
     else {
       // unsuccessful login
-        redirect_to("wrong.php");
+        redirect_to("./wrong.php");
     }
   }
 

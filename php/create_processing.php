@@ -4,9 +4,9 @@
     // form was submitted
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $password-confirm = $_POST['password-confirm'];
-      
-    if ($password == $password-confirm){
+//    $password-confirm = $_POST['password-confirm'];
+//      
+//    if ($password == $password-confirm){
           
         //encrypt password
         $hashed_password = sha1($password);
@@ -24,18 +24,18 @@
 
         if ($result) {
             // Success
-            // redirect_to("somepage.php");
-            echo "Success!";
+             redirect_to("../index.php");
+//            echo "Success!";
     //        echo "<br>";
     //        echo "<a href='index.php'>Log In</a>";
         } 
           else {
               die ("Database query failed. " . mysqli_error($connection));
         }
-    } else {
-
-        echo "passwords don't match";
-    }
+//    } else {
+//
+//        echo "passwords don't match";
+//    }
       
       
    }

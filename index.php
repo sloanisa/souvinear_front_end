@@ -1,11 +1,11 @@
 <?php require_once 'includes/initialize.php'; ?>
-
+<?php require_once 'includes/session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<!-- What it tries to add as homepage app name -->
-	<title>Log-in Souvinear</title>
+	<title>Journal Display Page</title>
 	<!-- META -->
 	<meta charset="utf-8">
 	<!-- Enabling our application to be able to work mobiley -->
@@ -14,10 +14,10 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 	<!-- Make the app title different from the web page title -->
-	<meta name="apple-mobile-web-app-title" content="souvinear">
+	<meta name="apple-mobile-web-app-title" content="myReel">
 
 	<!-- Disable auto phone number detection -->
-	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="telephone=no"> 
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/normalize.css">
@@ -57,78 +57,64 @@
 
 		<!-- Portrait View Start -->
 		<div class="port_wrap">
+			<div class="nav">
+				<img src="graphics/nav.png" alt="Nav">
+                <form action='php/logout_processing.php' method='post'>
+    <input type='submit' name='submit' value='Log Out'>
+    </form>
+			</div>
 
-				<div class="intro_wrap">
-					<h3>Souvinear</h3>
-					<svg xmlns="http://www.w3.org/2000/svg" width="174.61" height="89.4" viewBox="-35 -20 300 89.4">
-					  <g class="ticket_11" id="Ticket_11">
-					    <path class="cls-one" d="M1015,890.74v19.42s16.15,6,16.15,26.34S1015,961.87,1015,961.87v18.26h127.46v-89.4Z" transform="translate(-1015 -890.74)"/>
-					    <rect class="cls-two" x="115.66" y="5.99" width="4" height="17.99" rx="2" ry="2"/>
-					    <rect class="cls-two" x="115.66" y="33.5" width="4" height="17.99" rx="2" ry="2"/>
-					    <rect class="cls-two" x="115.66" y="61.01" width="4" height="17.99" rx="2" ry="2"/>
+			<div class="upcoming">
+				<h2>Upcoming Events</h2>
+				<div class="upcoming_events">
+					<h4>You don't have any upcoming events!</h4>
+					<img src="graphics/icon_venue.svg" alt="Venue Icon">
+				</div>
+			</div>
 
-					  </g>
-					  <g class="ticket_22" id="Ticket_22">
-					    <path class="cls-one" d="M1148.6,890.74v89.4h61V961.36s-15.38-8.52-15.38-25.92,15.38-25.35,15.38-25.35V890.74Z" transform="translate(-1015 -890.74)"/>
-					    <rect class="cls-two" x="139.8" y="8.19" width="4" height="17.99" rx="2" ry="2"/>
-					    <rect class="cls-two" x="139.8" y="35.71" width="4" height="17.99" rx="2" ry="2"/>
-					    <rect class="cls-two" x="139.8" y="63.22" width="4" height="17.99" rx="2" ry="2"/>
-					     <rect class="cls-two bar_scan" x="0" y="0" width="10" height="90" rx="2" ry="2"/>
-					  </g>
-					</svg>
+			<div class="plus_button">
+				<img src="graphics/plus_button.png" alt="Plus Button">
+			</div>
+
+			<div class="my_journal">
+				<h2>My Entries</h2>
+				<div>
+					<div class="flex">
+						<h6>John Legend</h6>
+						<h6>August 4th, 2017</h6>
+						<h6>BB&T Pavilion</h6>
+					</div>
+					<img class="legend" src="graphics/legend.jpeg" alt="John Legend">
 				</div>
 
-					<form class="form-wrap" action="php/login_processing.php" method="post">
-				    <div class="form-group_1">
-				      <label for="username">Username</label>
-				      <img src="graphics/user.svg" alt="User Icon">
-				      <input type="text" name="username" id="username" value="">
-				    </div>
-				    <div class="form-group_2">
-				      <label for="password">Password</label>
-				      <img src="graphics/lock.svg" alt="Lock Icon">
-				      <input type="password" name="password" id="password" value="">
-				    </div>
-						<div class="log-in_wrap" onclick="jmp2LocalPage('')">
-								<button type="submit"class="log-in">
-									<h4>login</h4>
-								</button>
-						</div>
-
-
-
-
-<a href="php/createAccount.php">
-
-						<div class="no_account_wrap">
-							<h4>no account?</h4>
-						</div>
-
-
-
-
-
-
-				<div class="bottom_bar_wrap" onclick="jmp2LocalPage('')">
-					<svg class="bottom_signup" xmlns="http://www.w3.org/2000/svg" width="375" height="104.2" viewBox="0 0 375 104.2">
-					    <linearGradient id="linear-gradient" y1="586.97" x2="375" y2="586.97" gradientUnits="userSpaceOnUse">
-					      <stop offset="0" stop-color="#a2d7d1"/>
-					      <stop offset="1" stop-color="#f7b4de"/>
-					    </linearGradient>
-					    <linearGradient id="linear-gradient-2" y1="621.85" x2="375" y2="621.85" gradientUnits="userSpaceOnUse">
-					      <stop offset="0" stop-color="#34d1ca"/>
-					      <stop offset="1" stop-color="#fe5893"/>
-					    </linearGradient>
-					  <path class="cls-1_one" d="M0,568.43S22.64,583,115,583,201.91,562.44,302,562.44c63.55,0,73,12.74,73,12.74v36.31H0Z" transform="translate(0 -562.44)"/>
-					  <path class="cls-2_two" d="M375,584.9s-16.62-7.85-86-7.85S176.37,599.63,70.67,599.63C10,599.63,0,584.36,0,584.36v82.28H375Z" transform="translate(0 -552.44)"/>
-					</svg>
-					<h3>Sign Up</h3>
+				<div>
+					<div class="flex">
+						<h6>Leela James</h6>
+						<h6>June 29th, 2017</h6>
+						<h6>Theatre of the Living Arts</h6>
+					</div>
+					<img class="legend" src="graphics/james.png" alt="Leela James">
 				</div>
-				</a>
-				</form>
 
+				<div>
+					<div class="flex">
+						<h6>Jazz Festival</h6>
+						<h6>April 17th, 2016</h6>
+						<h6>Center City</h6>
+					</div>
+					<img class="legend" src="graphics/legend.jpeg" alt="John Legend">
+				</div>
+
+				<div>
+					<div class="flex">
+						<h6>Mac Miller</h6>
+						<h6>December 12th, 2016 </h6>
+						<h6>Sovereign Center</h6>
+					</div>
+					<img class="legend" src="graphics/legend.jpeg" alt="John Legend">
+				</div>
+			</div>
 		</div>
-
 		<!-- Portrait View End  -->
 
 
@@ -144,7 +130,7 @@
 	<!-- JS to change config variables -->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
-	    // Customize config variable BEFORE loading addToHome.js file this is how to change the parameters
+	    // Customize config variable BEFORE loading addToHome.js file this is how to change the parameters 
 	    var addToHomeConfig = {
 	      touchIcon: true
 	    }

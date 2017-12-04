@@ -1,11 +1,11 @@
-<?php require_once '../includes/initialize.php'; ?>
+<?php require_once 'includes/initialize.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<!-- What it tries to add as homepage app name -->
-	<title>Create Account Souvinear</title>
+	<title>Log-in Souvinear</title>
 	<!-- META -->
 	<meta charset="utf-8">
 	<!-- Enabling our application to be able to work mobiley -->
@@ -20,10 +20,10 @@
 	<meta name="format-detection" content="telephone=no">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	<!-- Add2Home Styling -->
-	<link rel="stylesheet" href="../css/css-add2home.css">
-	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="css/css-add2home.css">
+	<link rel="stylesheet" href="css/main.css">
 
 	<!-- ICONS -->
 	<!-- iPad retina icon -->
@@ -59,7 +59,7 @@
 		<div class="port_wrap">
 
 				<div class="intro_wrap">
-					<h3>Souvinear</h3>
+					<h3>souvinear</h3>
 					<svg xmlns="http://www.w3.org/2000/svg" width="174.61" height="89.4" viewBox="-35 -20 300 89.4">
 					  <g class="ticket_11" id="Ticket_11">
 					    <path class="cls-one" d="M1015,890.74v19.42s16.15,6,16.15,26.34S1015,961.87,1015,961.87v18.26h127.46v-89.4Z" transform="translate(-1015 -890.74)"/>
@@ -78,37 +78,30 @@
 					</svg>
 				</div>
 
-                    <div class="form-wrap">
-					<form class="form-wrap" action="create_processing.php" method="post">
+					<form class="form-wrap" action="php/login_processing.php" method="post">
 				    <div class="form-group_1">
-				      <label for="username">Choose a username</label>
-				      <img src="../graphics/user.svg" alt="User Icon">
+				      <label for="username">Username</label>
+				      <img src="graphics/user.svg" alt="User Icon">
 				      <input type="text" name="username" id="username" value="">
 				    </div>
 				    <div class="form-group_2">
-				      <label for="password">Choose a password</label>
-				      <img src="../graphics/lock.svg" alt="Lock Icon">
+				      <label for="password">Password</label>
+				      <img src="graphics/lock.svg" alt="Lock Icon">
 				      <input type="password" name="password" id="password" value="">
 				    </div>
-                        <div class="form-group_3">
-				      <label for="password-confirm">Confirm a password</label>
-				      <img src="../graphics/lock.svg" alt="Lock Icon">
-				      <input type="password" name="password-confirm" id="password-confirm" value="">
-				    </div>
 						<div class="log-in_wrap" onclick="jmp2LocalPage('')">
-								<button type="submit" name="submit" class="log-in">
-									<h4>create account</h4>
+								<button type="submit"class="log-in">
+									<h4>login</h4>
 								</button>
 						</div>
-                   
 
 
 
 
-<a href="../login.php">
+<a href="php/createAccount.php">
 
 						<div class="no_account_wrap">
-							<h4>have an account?</h4>
+							<h4>no account?</h4>
 						</div>
 
 
@@ -129,11 +122,10 @@
 					  <path class="cls-1_one" d="M0,568.43S22.64,583,115,583,201.91,562.44,302,562.44c63.55,0,73,12.74,73,12.74v36.31H0Z" transform="translate(0 -562.44)"/>
 					  <path class="cls-2_two" d="M375,584.9s-16.62-7.85-86-7.85S176.37,599.63,70.67,599.63C10,599.63,0,584.36,0,584.36v82.28H375Z" transform="translate(0 -552.44)"/>
 					</svg>
-					<h3>Log In</h3>
+					<h3>Sign Up</h3>
 				</div>
 				</a>
 				</form>
-            </div>
 
 		</div>
 
@@ -150,15 +142,15 @@
 
 	<!-- JAVASCRIPT-->
 	<!-- JS to change config variables -->
-	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
 	    // Customize config variable BEFORE loading addToHome.js file this is how to change the parameters
 	    var addToHomeConfig = {
 	      touchIcon: true
 	    }
 	</script>
-	<script src="../js/js-add2home.js"></script>
-	<script src="../js/main.js"></script>
+	<script src="js/js-add2home.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
