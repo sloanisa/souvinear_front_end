@@ -1,8 +1,4 @@
 <?php require_once 'includes/initialize.php'; ?>
-<?php if (!(isset($_SESSION['user']))) {
-    redirect_to("index.php");
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en" manifest="cache.manifest">
