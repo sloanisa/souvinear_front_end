@@ -25,13 +25,13 @@
       
     if (($result->num_rows)== 1) {
 
-//        redirect_to("../index.php");
-        echo "Success!";
+        redirect_to("../navigation.php");
+//        echo "Success!";
     }
     else {
       // unsuccessful login
-//        redirect_to("../wrong.php");
-        echo "unsuccessful!";
+        redirect_to("./wrong.php");
+//        echo "unsuccessful!";
     }
   }
 

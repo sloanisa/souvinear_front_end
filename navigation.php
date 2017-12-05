@@ -52,7 +52,7 @@
   </head>
   <body>
     <nav id='menu'>
-      <a href="journal-cover.html">
+      <a href="index.php">
       <div id="journal"class="btn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1617 1101.889 35.556 50.111">
           <defs>

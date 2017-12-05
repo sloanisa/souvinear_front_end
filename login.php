@@ -90,7 +90,7 @@
 				      <input type="password" name="password" id="password" value="">
 				    </div>
 						<div class="log-in_wrap" onclick="jmp2LocalPage('')">
-								<button type="submit" name="submit "class="log-in">
+								<button type="submit" name="submit" class="log-in">
 									<h4>login</h4>
 								</button>
 						</div>
