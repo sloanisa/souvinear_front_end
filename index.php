@@ -127,9 +127,10 @@
 				</div>
 			</div>
 
-			<div class="plus_button">
-				<img src="graphics/plus_button.png" alt="Plus Button">
+            <div class="plus_button" onclick="jmp2LocalPage('')">
+				<img src="graphics/add-button.svg" alt="Plus Button">
 			</div>
+            
 
 			<div class="my_journal">
 				<h2>My Entries</h2>
