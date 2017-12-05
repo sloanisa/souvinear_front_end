@@ -5,7 +5,7 @@
     // form was submitted
     $username = $_POST['username'];
     $password = $_POST['password'];
-      
+    
     $hashed_password = sha1($password);
       
     $query = "SELECT * FROM user_accounts WHERE";
@@ -14,7 +14,7 @@
     $query .= " LIMIT 1";
     
     $result = mysqli_query($connection, $query);
-      
+    
     $row = mysqli_fetch_assoc($result);
       
     $user_id = $row['id'];
@@ -25,11 +25,13 @@
       
     if (($result->num_rows)== 1) {
 
-        redirect_to("./index.php");
+//        redirect_to("../index.php");
+        echo "Success!";
     }
     else {
       // unsuccessful login
-        redirect_to("./wrong.php");
+//        redirect_to("../wrong.php");
+        echo "unsuccessful!";
     }
   }
 
