@@ -25,22 +25,22 @@
 	<link rel="stylesheet" href="css/css-add2home.css">
 	<link rel="stylesheet" href="css/main.css">
 
-	<!-- ICONS -->
-	<!-- iPad retina icon -->
-	<link href="graphics/myreel_icon-152x152.png" sizes="152x152" rel="apple-touch-icon">
-	<!-- iPad retina icon (iOS < 7) -->
-	<link href="graphics/myreel_icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
-	<!-- iPad non-retina icon -->
-	<link href="graphics/myreel_icon-76x76.png" sizes="76x76" rel="apple-touch-icon">
-	<!-- iPad non-retina icon (iOS < 7) -->
-	<link href="graphics/myreel_icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
+	  	<!-- ICONS -->
+  	<!-- iPad retina icon -->
+  	<link href="graphics/souvinear_icon-152x152.png" sizes="152x152" rel="apple-touch-icon">
+  	<!-- iPad retina icon (iOS < 7) -->
+  	<link href="graphics/souvinear_icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
+  	<!-- iPad non-retina icon -->
+  	<link href="graphics/souvinear_icon-76x76.png" sizes="76x76" rel="apple-touch-icon">
+  	<!-- iPad non-retina icon (iOS < 7) -->
+  	<link href="graphics/souvinear_icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
 
-	<!-- iPhone 6 Plus icon -->
-	<link href="graphics/myreel_icon-180x180.png" sizes="180x180" rel="apple-touch-icon">
-	<!-- iPhone retina icon (iOS < 7) -->
-	<link href="graphics/myreel_icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
-	<!-- iPhone non-retina icon (iOS < 7) -->
-	<link href="graphics/myreel_icon-57x57.png" sizes="57x57" rel="apple-touch-icon">
+  	<!-- iPhone 6 Plus icon -->
+  	<link href="graphics/souvinear_icon-180x180.png" sizes="180x180" rel="apple-touch-icon">
+  	<!-- iPhone retina icon (iOS < 7) -->
+  	<link href="graphics/souvinear_icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
+  	<!-- iPhone non-retina icon (iOS < 7) -->
+  	<link href="graphics/souvinear_icon-57x57.png" sizes="57x57" rel="apple-touch-icon">
 
 	<!-- HACKS -->
 	<!-- Prevent text size change on orientation change -->
@@ -80,14 +80,14 @@
 
 					<form class="form-wrap" action="php/login_processing.php" method="post">
 				    <div class="form-group_1">
-				      <label for="username">Username</label>
+<!--				      <label for="username">Username</label>-->
 				      <img src="graphics/user.svg" alt="User Icon">
-				      <input type="text" name="username" id="username" value="">
+				      <input type="text" name="username" id="username" placeholder="Username" onfocus="this.placeholder = ''">
 				    </div>
 				    <div class="form-group_2">
-				      <label for="password">Password</label>
+<!--				      <label for="password">Password</label>-->
 				      <img src="graphics/lock.svg" alt="Lock Icon">
-				      <input type="password" name="password" id="password" value="">
+				      <input type="password" name="password" id="password" placeholder="Password" onfocus="this.placeholder = ''">
 				    </div>
 						<div class="log-in_wrap" onclick="jmp2LocalPage('')">
 								<button type="submit" name="submit" class="log-in">

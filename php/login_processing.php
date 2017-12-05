@@ -25,7 +25,7 @@
       
     if (($result->num_rows)== 1) {
 
-        redirect_to("../navigation.php");
+        redirect_to("../index.php");
 //        echo "Success!";
     }
     else {
