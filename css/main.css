@@ -1553,3 +1553,397 @@ nav{
           justify-content: flex-end;
   z-index: 2; }
 
+/*Journal Entry CSS*/
+#gather{
+	margin: 4rem;
+	text-align: center;
+}
+
+#gather input.text-input{
+	width: 100%;
+	height: 4.2rem;
+	border-radius: 28px;
+	background-color: #EEEEF6;
+	padding-left: 5.5rem;
+	border: none;
+}
+
+#gather input{
+	font-size: 1.8rem;
+}
+
+#event-input-container{padding-top: 1.8rem;}
+.first-container{margin-bottom: 1.5rem;}
+.second-container{margin-bottom: 1.5rem;}
+
+#photo-input-container{
+	text-align: center;
+	background-color: #EEEEF6;
+	margin-top:3rem;
+	width: 100%;
+	height: 30rem;
+}
+
+#photo-input-container input{
+	width: 80%;
+	height: 23rem;
+	margin-top: 2rem;
+	background-color: #4A4A4B;
+}
+
+
+#journal-input-container{margin-top:3rem;}
+
+#journal-input-container textarea{
+	background-color: #EEEEF6;
+	width: 100%;
+	height: 20rem;
+	border-radius: 25px;
+	border: none;
+	
+	padding-left: 5.5rem;
+	font-size: 1.8rem;
+}
+
+#save-entry-container{
+	text-align: center;
+}
+
+#save-entry-container img{
+	width: 100%;
+}
+
+#save-entry-container button{
+	border: none;
+	background-color: Transparent;
+}
+
+.input-icons-container{
+	position: absolute;
+	text-align: left;
+}
+
+.input-icons-container img.icon{
+	position: absolute;
+	margin-left: 7%;
+	margin-top: 4%;
+}
+.input-icons-container img.background-icon{
+	width: 45%;
+}
+
+
+/*Entry Page*/
+#title-container{
+	text-align: center;
+}
+
+#entryName{margin-bottom: 2rem;}
+#entryName p.entryTitle{
+	font-family: 'Averia Sans Libre', cursive;
+	color: #371343;
+	font-size: 4.5rem;
+	margin: 0;
+}
+
+#entryName p.entryOpener{
+	font-family: 'Muli', sans-serif;
+	font-size: 2.9rem;
+	margin: 0;
+}
+
+#entryLocation{
+	width: 50%;
+	margin-left: 8rem;
+}
+
+#entryLocation p{
+	font-family: 'Muli', sans-serif;
+	text-align: left;
+	font-size: 1.6rem;
+	margin: 0 0px 8px 0;
+}
+
+#entryLocation p.entryVenueTitle{
+	font-size: 2.5rem;
+}
+
+#entry-picture-container{
+	text-align: center;
+	margin: 0 4rem;
+	background-color: #EEEEF6;
+	height: 35rem;
+	margin-top: 3rem;
+}
+
+#entry-picture-container img{
+	width: 82%;
+	height: 90%;
+	padding: 2rem 0;
+}
+
+#journal-entry-container{
+	font-family: 'Muli', sans-serif;
+	margin: 2rem 1rem;
+	font-size: 2.5rem;
+}
+
+
+#journal-entry-container span{
+	font-size: 3rem;
+}
+
+p.container-titles{
+	text-align: center;
+	font-family: 'Averia Sans Libre', cursive;
+	font-size: 2.5rem;
+	margin: 0;
+}
+#collected-songs-container{
+	width: 100%;
+}
+
+#collected-songs-container .song-info-container{
+	display: flex;
+	position: absolute;
+	width: 100%;
+}
+
+.song-info-container img{height: 9rem;}
+.song-info-container p{
+	font-family: 'Muli', sans-serif;
+	font-size: 2rem;
+}
+.song-info-container p.songArtist{
+	position: absolute;
+	width: 100%;
+	height: 70%;
+	padding-left: 11rem;
+	padding-top: 3rem;
+}
+.song-info-container p.songTitle{
+	align-self: flex-start;
+	padding-left: 2rem;
+	margin-top: 2rem;
+	font-size: 2.5rem;
+}
+.song-info-container p.songNumber{
+	font-family: 'Averia Sans Libre', cursive;
+	position: absolute;
+	width: 100%;
+	text-align: right;
+	padding-right: 2rem;
+	padding-bottom: 1rem;
+	font-size: 3rem;
+}
+
+.song-background img{
+	width: 100%;
+}
+
+#badges-container{
+	width: 100%;
+	margin-top: 2rem;
+}
+
+#badges-flex-container{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+
+#badges-flex-container img.img-pic{
+	height: 5rem;
+	z-index: -1;
+}
+
+#badges-flex-container img.img-badge{
+	width: 20%;
+	position: absolute;
+
+}
+
+/* Single Entry Page */
+
+#text_wrap{
+  font-family:'Muli';
+  font-size:20px;
+  font-weight:lighter;
+  position: relative;
+  top:8rem;
+  width: 85%;
+  justify-content: center;
+  display:flex;
+  color:#381345;
+  margin: auto;
+}
+.song_title{
+  position: relative;
+  top:-1rem;
+  padding:0rem 1rem;
+}
+.artist{
+  left:-9.6rem;
+  position: relative;
+  top:1rem;
+}
+#collected_song img{
+  width:80px;
+  height:80px;
+}
+.song_info{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+#collected_song{
+  background-color:rgb(219, 219, 227);
+  border:1px solid white;
+  font-family:'Muli';
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+}
+#edit_wrap{
+  position: relative;
+  top:8rem;
+  margin-left:2rem;
+  margin-right:2rem;
+  margin-top:2rem;
+  margin-bottom:6rem;
+  border-radius:40px;
+  border:1px solid rgb(24, 226, 207);
+  font-family:'Muli';
+  font-style:italic;
+  background:rgb(24, 226, 207);
+  padding:0rem 2rem;
+  font-size:18px;
+  font-weight:bolder;
+  display:flex;
+  justify-content: center;
+}
+#collected_wrap{
+  top:8rem;
+  position: relative;
+  backround-color:rgb(219, 219, 227);
+  color:#381345;
+}
+
+.headliner{
+  font-family:'Averia Sans Libre';
+  font-size:36px;
+}
+
+.opener{
+  font-family:'Muli';
+  font-size:20px;
+  margin-top:-1.4rem;
+}
+
+.info_wrap{
+  position: relative;
+  top:3rem;
+  width:50%;
+  color:#381345;
+  margin:auto;
+  display:block;
+  text-align: left;
+}
+.event{
+  font-family:'Muli';
+  font-weight:lighter;
+  font-size:18px;
+  margin-bottom:-1.3rem;
+}
+
+
+.location{
+margin-bottom:-1.3rem;
+font-family:'Muli';
+font-weight:lighter;
+font-size:16px;
+}
+
+.date{
+font-family:'Muli';
+font-weight:lighter;
+font-size:16px;
+}
+#fixed_edit{
+  width:100%;
+  background-color:#381345;
+  color:white;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom:0;
+  left:0;
+  font-family:'Muli';
+  font-size:18px;
+  padding:0rem 0rem;
+  align-items: center;
+  height:30px;
+  z-index: 9;
+}
+
+#polaroid_wrap{
+  position: relative;
+  top:4rem;
+  margin:auto;
+  text-align: center;
+  background-color:rgb(219, 219, 227);
+  width:90%;
+  display: flex;
+  justify-content: center;
+  padding-top:1rem;
+  padding-bottom:3rem;
+  align-items: center;
+  flex-direction: column;
+  font-family:'Muli';
+  font-size:18px;
+  box-shadow:1px 1px 10px rgb(128, 128, 128);
+  color:#381345;
+}
+
+#polaroid_wrap img{
+  width:90%;
+  display: block;
+  margin:auto;
+  text-align: center;
+  height:auto;
+  max-height:320px;
+}
+
+.collected{
+  font-size:20px;
+  font-family:'Averia Sans Libre';
+  position:relative;
+  text-align: center;
+}
+
+
+#badges_wrap{
+  top:8rem;
+  position: relative;
+  background-color:rgb(223, 86, 152);
+  color:#381345;
+  padding:1rem 2rem;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#badges_wrap svg{
+  width:30%;
+  position: relative;
+  /*top:8rem;*/
+}
+.badges{
+  font-size:20px;
+  font-family:'Averia Sans Libre';
+  position:relative;
+  text-align: center;
+  top:8rem;
+}

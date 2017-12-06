@@ -127,7 +127,7 @@
 				</div>
 			</div>
 
-            <div class="plus_button" onclick="jmp2LocalPage('')">
+            <div class="plus_button" onclick="jmp2LocalPage('journal-complete.php')">
 				<img src="graphics/add-button.svg" alt="Plus Button">
 			</div>
             
