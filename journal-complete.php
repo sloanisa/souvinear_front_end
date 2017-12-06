@@ -26,7 +26,7 @@
 
   	<!-- ICONS -->
   	<!-- iPad retina icon -->
-  	<link href="graphics/myreel_icon-152x152.png" sizes="152x152" rel="apple-touch-icon">
+  	<link href="graphics/souvinear_icon-152x152.png" sizes="152x152" rel="apple-touch-icon">
   	<!-- iPad retina icon (iOS < 7) -->
   	<link href="graphics/myreel_icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
   	<!-- iPad non-retina icon -->
@@ -104,17 +104,38 @@
     </svg>
 </div>
 
+<?php
+
+    if (isset($_POST['submit'])) {
+    // form was submitted
+    $concert_date = $_POST['concert_date'];
+    $headliner = $_POST['headliner'];
+    
+    $user_id = $_SESSION['user'];
+    
+     $query = "SELECT * FROM concert_info WHERE concert_date = '{$concert_date}' AND headliner = '{$headliner}' AND user_id = '{$user_id}' ";
+
+     $result = mysqli_query($connection, $query);
+
+     if (!$result){ 
+         die('Database query failed.');
+     }
+
+         while ($row = mysqli_fetch_assoc($result)) {
+             
+             ?>      
+
 <div class="entry_wrap">
   <div class="info_wrap">
-    <h1 class="headliner">Headliner</h1>
-    <h2 class="opener">Supporting</h2>
-    <h3 class="event">Event Title</h3>
-    <h4 class="location">Location</h4>
-    <h4 class="date">Date</h4>
+    <h1 class="headliner"><?php echo $row['headliner']; ?></h1>
+    <h2 class="opener"><?php echo $row['supporting_act']; ?></h2>
+    <h3 class="event"><?php echo $row['concert_time']; ?></h3>
+    <h4 class="location"><?php echo $row['venue']; ?></h4>
+    <h4 class="date"><?php echo $row['concert_date']; ?></h4>
   </div>
 
 
-<div id="polaroid_wrap">
+<div id="polaroid_wrap"> 
   <img src="graphics/test-photo.png" alt="">
   <p class="polaroid_caption">Legendary.</p>
 </div>
@@ -127,12 +148,7 @@
 -->
 
 <div id="text_wrap">
-  <p>John Legend’s name speaks for
-him. Legend. He absoutely killed
-the set, halfway through he
-played Green Light and brought
-Andre 3000 out for a surprise
-performance. Unforgettable.</p>
+  <p><?php echo $row['entry']; ?></p>
 </div>
 
 <div id="collected_wrap">
@@ -231,9 +247,29 @@ performance. Unforgettable.</p>
     </g>
 </svg>
 </div>
-<div id="edit_wrap">
-  <p>edit this entry</p>
-</div>
+    
+    <form action="edit_concert.php" method="post" id="edit_entry">
+    <p>
+      <input type="text" name="headliner" id="headliner" value="<?php echo $concert_info['headliner']; ?>" class="uneeded">
+      </p>   
+    <p>
+      <input type="date" name="concert_date" id="concert_date" value="<?php echo $concert_info['concert_date']; ?>" class="uneeded">
+    </p>                 
+
+    <button type="submit" name="submit">
+        <div id="edit_wrap">
+            <p>edit this entry</p>
+        </div>
+        </button>
+    </form>
+                            
+              <?php   
+         }
+    }
+        mysqli_free_result($result);
+
+
+?>
 </div>
   </body>
 </html>

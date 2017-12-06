@@ -116,9 +116,6 @@
     </form>
 			</div>
 -->
-<form action='php/logout_processing.php' method='post'>
-    <input type='submit' name='submit' value='Log Out'>
-    </form>
 			<div class="upcoming">
 				<h2>Upcoming Events</h2>
 				<div class="upcoming_events">
@@ -127,48 +124,79 @@
 				</div>
 			</div>
 
-            <div class="plus_button" onclick="jmp2LocalPage('journal-complete.php')">
+            <div class="plus_button" onclick="jmp2LocalPage('add_concert.php')">
 				<img src="graphics/add-button.svg" alt="Plus Button">
 			</div>
             
 
 			<div class="my_journal">
 				<h2>My Entries</h2>
-				<div>
-					<div class="flex">
-						<h6>John Legend</h6>
-						<h6>August 4th, 2017</h6>
-						<h6>BB&T Pavilion</h6>
-					</div>
-					<img class="legend" src="graphics/legend.jpeg" alt="John Legend">
-				</div>
+                
+            <?php
+    
+            $user_id = $_SESSION['user'];
+    
+            $query = 'SELECT * ';
+            $query .= 'FROM concert_info WHERE';
+            $query .= " user_id = '{$user_id}'";
+            $query .= "ORDER BY concert_date ASC";
+            $result = mysqli_query($connection, $query);
+ 
+            if (!$result) {
+              die('Database query failed.');
+            }
 
+//            $row = mysqli_fetch_row($result);
+            
+            while ($concert_info = mysqli_fetch_assoc($result)) { 
+          ?>
 				<div>
-					<div class="flex">
-						<h6>Leela James</h6>
-						<h6>June 29th, 2017</h6>
-						<h6>Theatre of the Living Arts</h6>
-					</div>
-					<img class="legend" src="graphics/james.png" alt="Leela James">
-				</div>
+					<div class="flex" id="entry_flex">
+                       
+                    <div>
+                    <form action="edit_concert.php" method="post" id="edit_entry">
+                        <p>
+                          <input type="text" name="headliner" id="headliner" value="<?php echo $concert_info['headliner']; ?>" class="uneeded">
+                          </p>   
+                        <p>
+                          <input type="date" name="concert_date" id="concert_date" value="<?php echo $concert_info['concert_date']; ?>" class="uneeded">
+                        </p>                 
 
-				<div>
-					<div class="flex">
-						<h6>Jazz Festival</h6>
-						<h6>April 17th, 2016</h6>
-						<h6>Center City</h6>
-					</div>
-					<img class="legend" src="graphics/legend.jpeg" alt="John Legend">
-				</div>
+                        <input type="submit" name="submit" id="concert_edit" value="Edit">
+                    </form>
+                    </div>
+                        
+                        <div class="concert_info">
+						<h6><?php echo $concert_info['headliner']; ?></h6>
+						<h6><?php echo $concert_info['concert_date']; ?></h6>
+						<h6><?php echo $concert_info['venue']; ?></h6>
+                        </div>
+                        
+                        <div>
+                        <form action="journal_complete.php" method="post">
+                        <button type="submit" name="submit">
+                            <p>
+                          <input type="text" name="headliner" id="headliner" value="<?php echo $concert_info['headliner']; ?>" class="uneeded">
+                          </p>   
+                        <p>
+                          <input type="date" name="concert_date" id="concert_date" value="<?php echo $concert_info['concert_date']; ?>" class="uneeded">
+                        </p>                 
 
-				<div>
-					<div class="flex">
-						<h6>Mac Miller</h6>
-						<h6>December 12th, 2016 </h6>
-						<h6>Sovereign Center</h6>
-					</div>
-					<img class="legend" src="graphics/legend.jpeg" alt="John Legend">
+					   <img class="legend" src="graphics/legend.jpeg" alt="John Legend">
+                            </button>
+                            </form>
+                    </div>
+            
 				</div>
+                
+                        <?php
+                        
+          } 
+        
+        mysqli_free_result($result);
+        ?>
+        
+
 			</div>
 		</div>
 		<!-- Portrait View End  -->

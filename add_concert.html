@@ -32,6 +32,7 @@
 		  </div>
         
 		
+<!--
 		<div id="event-input-container" class="second-container">
 			<div class="input-icons-container">
 				 <img class="icon" src="graphics/icon_venue.svg">
@@ -39,6 +40,7 @@
 			 </div>
 			<input type="text" name="eventTitle" placeholder="Event Title" id="eventTitle" class="text-input"> 
 	    </div>
+-->
    		
 		<div id="venue-input-container" class="second-container">
 			<div class="input-icons-container">
@@ -48,7 +50,7 @@
           <input type="text" name="venue"  placeholder="Venue" id="venue" class="text-input">
         </div>
 		  
-		<div id="date-input-container">
+		<div id="date-input-container" class="third-container">
 			<div class="input-icons-container">
 				 <img class="icon" src="graphics/">
 			 	<img class="background-icon" src="graphics/inputcolorblock.svg">
@@ -56,16 +58,26 @@
           <input type="date" name="concert_date" id="concert_date" class="text-input" placeholder="date">
 		</div>
      	
+        <div id="date-input-container">
+			<div class="input-icons-container">
+				 <img class="icon" src="graphics/">
+			 	<img class="background-icon" src="graphics/inputcolorblock.svg">
+			 </div>
+          <input type="time" name="concert_time" id="concert_time" class="text-input" placeholder="">
+		</div>  
+          
+<!--
 		<div id="photo-input-container">
 			<input type="file" name="image" id="photoInput">  
 		</div>
+-->
 		 
 		<div id="journal-input-container"  class="container-padding">
 			<div class="input-icons-container">
 				 <img class="icon" src="graphics/journal.svg">
 			 	<img class="background-icon"src="graphics/inputcolorblock.svg">
 			 </div>
-       <textarea name="journal" placeholder="what was the best part of the night?"></textarea>
+       <textarea name="entry" id="entry" placeholder="What was the best part of the night?" class="textarea"></textarea>
 		</div>
 
       </div>

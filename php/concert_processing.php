@@ -1,16 +1,18 @@
 <?php
-  require_once './includes/initialize.php'; 
+  require_once '../includes/initialize.php'; 
+
   if (isset($_POST['submit'])) {
     // form was submitted
+          
     $user_id = $_SESSION['user'];
-    $concert_date = $_POST['concert_date'];
-    $concert_time = $_POST['concert_time'];
-    $venue = $_POST['venue'];
     $headliner = $_POST['headliner'];
     $supporting_act = $_POST['supporting_act'];
+    $venue = $_POST['venue'];
+    $concert_date = $_POST['concert_date'];
+    $concert_time = $_POST['concert_time'];
     $entry = $_POST['entry'];
-
-
+      
+      echo $user_id;
       
     $query = "INSERT INTO concert_info (";
     $query .= " user_id, concert_date, concert_time, venue, headliner, supporting_act, entry";
@@ -25,13 +27,13 @@
         echo '<script language="javascript">';
         echo 'alert("Concert Added!")';
         echo '</script>';
-        redirect_to("add_concert.php");
+        redirect_to("../index.php");
 
     } 
       else {
           die ("Database query failed. " . mysqli_error($connection));
     }
-      
+            
   }
 
   

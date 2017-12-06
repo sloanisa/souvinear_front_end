@@ -17,6 +17,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+
   .intro_wrap h3 {
     font-family: 'Averia Sans Libre', cursive;
     font-size: 3em;
@@ -24,8 +25,105 @@
     margin-top: 2rem;
     color: #371443; }
 
+/* added css for login & create account */
+
+.form-wrap{
+display:flex;
+justify-content: center;
+flex-direction: column;
+margin:auto;
+padding:3rem;
+}
+
+.port_wrap{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	margin:auto;
+}
+
+.log-in_wrap{
+	padding:2rem 0rem;
+}
+
+.log-in_wrap .log-in {
+    border-radius: 50px;
+    width: 100%;
+    border: none;
+    background-color: #2dd5cc;
+}
+
+.no_account_wrap{
+	position: relative;
+	top:4rem;
+	z-index:100;
+	left:-11rem;
+}
+
+.bottom_bar_wrap .bottom_signup {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.password-confirm{
+	width:15rem;
+}
+
+.form-wrap{
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+	margin:auto;
+	text-align:center;
+}
+
+.form-group_2 {
+    position: relative;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.form-group_1 {
+    position: relative;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+.no_account_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    position: relative;
+    z-index: 100;
+    top: 8.5rem;
+    left: -13.3rem;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.form-group_3 img {
+    position: absolute;
+    width: 20px;
+    margin-top: -.4rem;
+    margin-left: 13rem;
+}
+.form-group_2 img {
+    position: absolute;
+    width: 20px;
+    margin-top: -.4rem;
+    margin-left: 13rem;
+}
+
+.form-group_1 img {
+    position: absolute;
+    width: 23px;
+    margin-top: 0rem;
+    margin-left: 13rem;
+}
+/* end */
+
 input::placeholder {
-    color: white;
+    color: black;
 }
 input:focus::-webkit-input-placeholder { color:transparent; }
 
@@ -1478,6 +1576,9 @@ nav{
   padding: 0;
   color: #371443; }
 
+.my_journal{
+    z-index: -1;
+}
 .my_journal h2 {
   margin-left: 10px;
   color: #371443;
@@ -1516,6 +1617,10 @@ nav{
     margin-top: -6.3rem;
     left: 69.5%; }
 
+.upcoming{
+    z-index: -1;
+}
+
 .upcoming_events {
   width: 100%;
   background-color: #ededf7;
@@ -1541,9 +1646,12 @@ nav{
     margin-bottom: 15px; }
 
 .plus_button {
-  width: 100%;
-  margin-top: 54%;
-  margin-left: 2px;
+width: 40%;
+margin-top: 54%;
+margin-left: 2px;
+right: -1px;
+/*z-index:-1;*/
+    bottom: 0;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1551,7 +1659,9 @@ nav{
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  z-index: 2; }
+  }
+
+/*Journal Entry CSS*/
 
 /*Journal Entry CSS*/
 #gather{
@@ -1631,7 +1741,6 @@ nav{
 .input-icons-container img.background-icon{
 	width: 45%;
 }
-
 
 /*Entry Page*/
 #title-container{
@@ -1764,6 +1873,235 @@ p.container-titles{
 
 }
 
+/*
+#gather{
+	margin: 4rem;
+	text-align: center;
+}
+
+#gather input.text-input{
+	width: 100%;
+	height: 7rem;
+	border-radius: 28px;
+	background-color: #EEEEF6;
+	padding-left: 5.5rem;
+	border: none;
+    padding-left: 9rem;
+    color: black;
+}
+
+#gather textarea{
+    padding-top: 2rem;
+}
+
+
+#gather input{
+	font-size: 2rem;
+}
+
+#event-input-container{padding-top: 1.8rem;}
+.first-container{margin-bottom: 1.5rem;}
+.second-container{margin-bottom: 1.5rem;}
+.third-container{margin-bottom: 1.5rem;}
+
+#photo-input-container{
+	text-align: center;
+	background-color: #EEEEF6;
+	margin-top:3rem;
+	width: 100%;
+	height: 30rem;
+}
+
+#photo-input-container input{
+	width: 80%;
+	height: 23rem;
+	margin-top: 2rem;
+	background-color: #4A4A4B;
+}
+
+
+#journal-input-container{margin-top:3rem;}
+
+#journal-input-container textarea{
+	background-color: #EEEEF6;
+	width: 100%;
+	height: 20rem;
+	border-radius: 25px;
+	border: none;
+	
+	padding-left: 5.5rem;
+	font-size: 1.8rem;
+}
+
+#save-entry-container{
+    width: 100%;
+	text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#save-entry-container img{
+	width: 30rem;
+}
+
+#save-entry-container button{
+	border: none;
+	background-color: Transparent;
+    
+}
+
+.input-icons-container{
+	position: absolute;
+	text-align: left;
+}
+
+.input-icons-container img.icon{
+	position: absolute;
+	margin-left: 10%;
+	margin-top: 4%;
+    height: 85%;
+}
+.input-icons-container img.background-icon{
+	width: 75%;
+
+}
+*/
+
+
+/*Entry Page*/
+/*
+#title-container{
+	text-align: center;
+}
+
+#entryName{margin-bottom: 2rem;}
+#entryName p.entryTitle{
+	font-family: 'Averia Sans Libre', cursive;
+	color: #371343;
+	font-size: 4.5rem;
+	margin: 0;
+}
+
+#entryName p.entryOpener{
+	font-family: 'Muli', sans-serif;
+	font-size: 2.9rem;
+	margin: 0;
+}
+
+#entryLocation{
+	width: 50%;
+	margin-left: 8rem;
+}
+
+#entryLocation p{
+	font-family: 'Muli', sans-serif;
+	text-align: left;
+	font-size: 1.6rem;
+	margin: 0 0px 8px 0;
+}
+
+#entryLocation p.entryVenueTitle{
+	font-size: 2.5rem;
+}
+
+#entry-picture-container{
+	text-align: center;
+	margin: 0 4rem;
+	background-color: #EEEEF6;
+	height: 35rem;
+	margin-top: 3rem;
+}
+
+#entry-picture-container img{
+	width: 82%;
+	height: 90%;
+	padding: 2rem 0;
+}
+
+#journal-entry-container{
+	font-family: 'Muli', sans-serif;
+	margin: 2rem 1rem;
+	font-size: 2.5rem;
+}
+
+
+#journal-entry-container span{
+	font-size: 3rem;
+}
+
+p.container-titles{
+	text-align: center;
+	font-family: 'Averia Sans Libre', cursive;
+	font-size: 2.5rem;
+	margin: 0;
+}
+#collected-songs-container{
+	width: 100%;
+}
+
+#collected-songs-container .song-info-container{
+	display: flex;
+	position: absolute;
+	width: 100%;
+}
+
+.song-info-container img{height: 9rem;}
+.song-info-container p{
+	font-family: 'Muli', sans-serif;
+	font-size: 2rem;
+}
+.song-info-container p.songArtist{
+	position: absolute;
+	width: 100%;
+	height: 70%;
+	padding-left: 11rem;
+	padding-top: 3rem;
+}
+.song-info-container p.songTitle{
+	align-self: flex-start;
+	padding-left: 2rem;
+	margin-top: 2rem;
+	font-size: 2.5rem;
+}
+.song-info-container p.songNumber{
+	font-family: 'Averia Sans Libre', cursive;
+	position: absolute;
+	width: 100%;
+	text-align: right;
+	padding-right: 2rem;
+	padding-bottom: 1rem;
+	font-size: 3rem;
+}
+
+.song-background img{
+	width: 100%;
+}
+
+#badges-container{
+	width: 100%;
+	margin-top: 2rem;
+}
+
+#badges-flex-container{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+
+#badges-flex-container img.img-pic{
+	height: 5rem;
+	z-index: -1;
+}
+
+#badges-flex-container img.img-badge{
+	width: 20%;
+	position: absolute;
+
+}
+*/
+
 /* Single Entry Page */
 
 #text_wrap{
@@ -1826,7 +2164,7 @@ p.container-titles{
 #collected_wrap{
   top:8rem;
   position: relative;
-  backround-color:rgb(219, 219, 227);
+  background-color:rgb(219, 219, 227);
   color:#381345;
 }
 
@@ -1946,4 +2284,60 @@ font-size:16px;
   position:relative;
   text-align: center;
   top:8rem;
+}
+
+/*create an account edits */
+
+.bottom_bar_wrap .bottom_signup {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.form-group_3 input {
+    background-color: #afb0be ;
+    outline: none;
+    -webkit-transition: background-color 350ms ease 0s;
+    transition: background-color 350ms ease 0s;
+    color: white;
+    width: 15rem;
+}
+
+.log-in_wrap .log-in {
+    border-radius: 50px;
+    width: 100%;
+    border: none;
+    background-color: #2dd5cc ;
+}
+
+.form-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+/*php hax */
+.uneeded{
+    display: none;
+}
+
+#concert_edit{
+font-family:'Muli';
+  font-size:18px;
+}
+
+#entry_flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.concert_info{
+    padding-bottom: 1rem;
+    padding-left: 7rem;
+    text-align: right;
 }
